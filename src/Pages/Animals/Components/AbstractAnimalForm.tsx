@@ -1,4 +1,4 @@
-import цццReact, {useState} from "react";
+import React, {useState} from "react";
 import {Animal} from "../../../Types/Animal";
 import {Link} from "react-router-dom";
 import { Form, Formik} from "formik";

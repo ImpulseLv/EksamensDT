@@ -3,6 +3,7 @@ import {Animal} from "../../Types/Animal";
 import {useNavigate, useParams} from "react-router-dom";
 import {AbstractAnimalForm} from "./Components/AbstractAnimalForm";
 import axios from "axios";
+import Navbar from "../MainPage/Navbar";
 
 export const AnimalEditForm: React.FC = () => {
     const baseURL = "http://localhost:8080/animals";
@@ -35,11 +36,11 @@ export const AnimalEditForm: React.FC = () => {
         axios
             .put(`${baseURL}/${idToUpdate}`, values)
             .then((response) => {
-                console.log("Данные успешно отправлены на сервер:", response.data);
+                console.log("The data has been successfully sent to the server :", response.data);
                 navigate("/animals");
             })
             .catch((error) => {
-                console.error("Ошибка при отправке данных:", error);
+                console.error("Error sending data :", error);
             })
             .finally(() => {
                 setIsLoading(false);
@@ -51,8 +52,11 @@ export const AnimalEditForm: React.FC = () => {
     }
 
     return (
+        <>
+            <Navbar/>
         <AbstractAnimalForm initialValues={initialValues} handleFormSubmit={handleFormSubmit} isLoading={isLoading} />
-    );
+        </>
+            );
 };
 
 

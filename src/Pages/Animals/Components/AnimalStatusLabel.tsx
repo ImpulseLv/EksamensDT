@@ -1,3 +1,4 @@
+import React from "react";
 import {AnimalStatuss} from "../../../Types/Animal";
 
 interface AnimalStatusLabelProps {

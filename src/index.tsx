@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import {LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterMoment} from "@mui/x-date-pickers/AdapterMoment";
+import {AuthProvider} from "./Pages/LoginAndRegister/AuthContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,9 +18,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
+      <AuthProvider>
       <LocalizationProvider dateAdapter={AdapterMoment}>
       <RouterProvider router={router} />
       </LocalizationProvider>
+      </AuthProvider>
   </React.StrictMode>
 );
 

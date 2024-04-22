@@ -12,13 +12,14 @@ code {
     monospace;
 }
 .centered-container {
-  background-color: rgba(204, 204, 204, 0.8);
+  background-color: rgb(255, 255, 255);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
   max-width: 600px;
+
 }
 body {
   background-image: url('images/background.png');
@@ -63,4 +64,62 @@ h3 {
 .loginBlock2 {
   background-color: #282c34;
   text-align: center;
+}
+
+.navbar {
+  background-color: #3498db; /* Blue background */
+  color: #fff; /* White text */
+  padding: 10px 0;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo a {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-buttons a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-buttons a:hover {
+  color: #ecf0f1; /* Light grey on hover */
+}
+
+.navbar-auth a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-auth a:hover {
+  color: #ecf0f1; /* Light grey on hover */
+}
+
+.button-clicked {
+  background-color: gray;
+  color: #3498db;
+  border-radius: 4px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.button-clicked:hover {
+  background-color: gray;
 }

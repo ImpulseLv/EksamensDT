@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 import {AbstractAnimalForm} from "./Components/AbstractAnimalForm";
 import axios from "axios";
 import moment from "moment";
+import Navbar from "../MainPage/Navbar";
 const baseURL = "http://localhost:8080/animals";
 
 export const NewAnimals: React.FC = () => {
@@ -26,18 +27,21 @@ export const NewAnimals: React.FC = () => {
         console.log("Submitted values:", values);
         axios.post(baseURL, values)
             .then((response) => {
-                console.log('Данные успешно отправлены на сервер:', response.data);
+                console.log('The data has been successfully sent to the server :', response.data);
                 navigate("/animals");
             })
             .catch((error) => {
-                console.error('Ошибка при отправке данных:', error);
+                console.error('Error sending data :', error);
             })
             .finally(() => {
                 setIsLoading(false);
             });
     };
     return (
+        <>
+        <Navbar/>
         <AbstractAnimalForm initialValues={newAnimalData} handleFormSubmit={handleFormSubmit} isLoading={isLoading} ></AbstractAnimalForm>
+        </>
     );
 };
 
