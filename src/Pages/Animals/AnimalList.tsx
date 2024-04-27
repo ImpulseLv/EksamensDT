@@ -6,7 +6,7 @@ import DataTable from 'react-data-table-component';
 import moment from "moment";
 import { TableColumn } from "react-data-table-component/dist/src/DataTable/types";
 import Button from '@mui/material/Button';
-import axios from "axios";
+import axios from "../Axios/AxiosConfig"
 import Navbar from "../MainPage/Navbar";
 
 const baseURL = "http://localhost:8080/animals";
@@ -18,11 +18,13 @@ export function MyComponent() {
     useEffect(() => {
         axios.get("http://localhost:8080/roles/user")
             .then(response => {
-                setUserRole(response.data.authority);
+                setUserRole(response.data);
+                console.log(response.data);
             })
             .catch(error => {
                 console.error("Error fetching user role:", error);
             });
+
 
         axios.get<Animal[]>(baseURL)
             .then((response) => {

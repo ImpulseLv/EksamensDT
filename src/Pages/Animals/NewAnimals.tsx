@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Animal, AnimalStatuss} from "../../Types/Animal";
 import {useNavigate} from "react-router-dom";
 import {AbstractAnimalForm} from "./Components/AbstractAnimalForm";
-import axios from "axios";
+import axios from "../Axios/AxiosConfig"
 import moment from "moment";
 import Navbar from "../MainPage/Navbar";
 const baseURL = "http://localhost:8080/animals";

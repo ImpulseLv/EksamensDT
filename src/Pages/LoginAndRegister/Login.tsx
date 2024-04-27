@@ -3,12 +3,11 @@ import { TextField, Button, Container, Paper, Typography } from '@mui/material';
 import {Link, useNavigate} from "react-router-dom";
 import Navbar from "../MainPage/Navbar";
 import {useAuth} from "./AuthContext";
-import axios from "axios";
+import axios from "../Axios/AxiosConfig"
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [token, setToken] = useState('');
     const [error, setError] = useState('');
     const { handleLogin: contextHandleLogin } = useAuth();
     const navigate = useNavigate();

@@ -1,6 +1,6 @@
 
 import React, {useState} from 'react';
-import axios from 'axios';
+import axios from "../Axios/AxiosConfig"
 import {Container, Paper, TextField, Typography} from "@mui/material";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";

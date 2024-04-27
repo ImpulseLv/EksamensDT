@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Animal} from "../../Types/Animal";
 import {useNavigate, useParams} from "react-router-dom";
 import {AbstractAnimalForm} from "./Components/AbstractAnimalForm";
-import axios from "axios";
+import axios from "../Axios/AxiosConfig"
 import Navbar from "../MainPage/Navbar";
 
 export const AnimalEditForm: React.FC = () => {
